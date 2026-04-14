@@ -40,7 +40,7 @@ const setupTextHover = (container, type) => {
     letters.forEach((letter) => {
       const { left: l, width: w } = letter.getBoundingClientRect();
       const distance = Math.abs(mouseX - (l - left + w / 2));
-      const intensity = Math.exp(-(distance ** 2) / 20000);
+      const intensity = Math.exp(-(distance ** 2) / 5000);
 
       animateLetter(letter, min + (max - min) * intensity);
     });
@@ -77,13 +77,13 @@ const Welcome = () => {
     <section id="welcome">
       <p ref={subtitleRef}>
         {renderText(
-          "Hey, I'm Valeria Paz! Welcome to my",
+          "Hi there! I'm Valeria Paz. Glad you're here. Take a look at my",
           "text-3xl font-georama",
           100,
         )}
       </p>
       <h1 ref={titleRef} className="mt-7">
-        {renderText("Portfolio", "text-9xl italic font-georama")}
+        {renderText("Portfolio!", "text-9xl italic font-georama")}
       </h1>
 
       <div className="small-screen">
