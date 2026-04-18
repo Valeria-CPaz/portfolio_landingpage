@@ -29,41 +29,42 @@ const navIcons = [
 
 const dockApps = [
   {
-    id: "finder",
-    name: "Portfolio", // was "Finder"
-    icon: "finder.png",
+    id: "firefox",
+    name: "Articles", 
+    icon: "firefox.svg",
     canOpen: true,
   },
   {
-    id: "safari",
-    name: "Articles", // was "Safari"
-    icon: "safari.png",
-    canOpen: true,
-  },
-  {
-    id: "photos",
-    name: "Gallery", // was "Photos"
-    icon: "photos.png",
-    canOpen: true,
-  },
-  {
-    id: "contact",
-    name: "Contact", // or "Get in touch"
-    icon: "contact.png",
-    canOpen: true,
-  },
-  {
-    id: "terminal",
-    name: "Skills", // was "Terminal"
-    icon: "terminal.png",
+    id: "files",
+    name: "Portfolio", 
+    icon: "nautilus.svg",
     canOpen: true,
   },
   {
     id: "trash",
-    name: "Archive", // was "Trash"
-    icon: "trash.png",
+    name: "Archive", 
+    icon: "app-store.svg",
     canOpen: false,
+  },  
+  {
+    id: "photos",
+    name: "Gallery",
+    icon: "photos.svg",
+    canOpen: true,
   },
+  {
+    id: "contact",
+    name: "Contact", 
+    icon: "contacts.svg",
+    canOpen: true,
+  },
+  {
+    id: "terminal",
+    name: "Skills",
+    icon: "terminal.svg",
+    canOpen: true,
+  },
+  
 ];
 
 const blogPosts = [
