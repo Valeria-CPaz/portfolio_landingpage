@@ -2,7 +2,7 @@ const navLinks = [
   {
     id: 1,
     name: "Projects",
-    type: "finder",
+    type: "files",
   },
   {
     id: 3,
@@ -23,39 +23,21 @@ const navIcons = [
   },
   {
     id: 2,
-    img: "/icons/mode.svg",
+    img: "/icons/volume.png",
   },
 ];
 
 const dockApps = [
   {
     id: "firefox",
-    name: "Articles", 
+    name: "Articles",
     icon: "firefox.svg",
     canOpen: true,
   },
   {
     id: "files",
-    name: "Portfolio", 
+    name: "Portfolio",
     icon: "nautilus.svg",
-    canOpen: true,
-  },
-  {
-    id: "trash",
-    name: "Archive", 
-    icon: "app-store.svg",
-    canOpen: false,
-  },  
-  {
-    id: "photos",
-    name: "Gallery",
-    icon: "photos.svg",
-    canOpen: true,
-  },
-  {
-    id: "contact",
-    name: "Contact", 
-    icon: "contacts.svg",
     canOpen: true,
   },
   {
@@ -64,7 +46,24 @@ const dockApps = [
     icon: "terminal.svg",
     canOpen: true,
   },
-  
+  {
+    id: "photos",
+    name: "Gallery",
+    icon: "photos.svg",
+    canOpen: true,
+  },
+  {
+    id: "contact",
+    name: "Contact",
+    icon: "contacts.svg",
+    canOpen: true,
+  },
+  {
+    id: "store",
+    name: "Software",
+    icon: "app-store.svg",
+    canOpen: false,
+  },
 ];
 
 const blogPosts = [
@@ -103,15 +102,15 @@ const techStack = [
   },
   {
     category: "Styling",
-    items: ["Tailwind CSS", "Sass", "CSS"],
+    items: ["Tailwind CSS", "CSS"],
   },
   {
     category: "Backend",
-    items: ["Node.js", "Express", "NestJS", "Hono"],
+    items: ["Java", "Node.js", "Express", "NestJS"],
   },
   {
     category: "Database",
-    items: ["MongoDB", "PostgreSQL"],
+    items: ["PostgreSQL", "MongoDB"],
   },
   {
     category: "Dev Tools",
@@ -472,10 +471,10 @@ export const locations = {
 const INITIAL_Z_INDEX = 1000;
 
 const WINDOW_CONFIG = {
-  finder: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
+  files: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
   contact: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
   resume: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
-  safari: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
+  firefox: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
   photos: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
   terminal: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
   txtfile: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
