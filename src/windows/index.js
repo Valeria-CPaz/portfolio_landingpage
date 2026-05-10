@@ -1,3 +1,5 @@
 import Terminal from "./Terminal";
+import Firefox from "./Firefox";
+import Resume from "./Resume";
 
-export { Terminal };
+export { Terminal, Firefox, Resume };

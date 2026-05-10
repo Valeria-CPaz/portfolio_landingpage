@@ -7,7 +7,7 @@ body {
   width: 100dvw;
   overflow: hidden;
   height: 100dvh;
-  background-image: url("/images/wallpaper3.png");
+  background-image: url("/images/wallpaper.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -93,7 +93,15 @@ body {
   }
 
   #welcome {
-    @apply text-gray-200 flex flex-col justify-center items-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 select-none max-sm:h-screen max-sm:w-full max-sm:px-10;
+    @apply text-gray-100 flex flex-col justify-center items-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 select-none max-sm:h-screen max-sm:w-full max-sm:px-10;
+
+    p,
+    h1,
+    span {
+      text-shadow:
+        0 0 40px rgba(0, 0, 0, 0.8),
+        0 0 80px rgba(0, 0, 0, 0.5);
+    }
 
     .small-screen {
       @apply sm:hidden m-7 bg-red-300/20 backdrop-blur-lg p-3 rounded-md absolute top-10;
@@ -110,7 +118,7 @@ body {
     .dock-container {
       @apply bg-gnome-surface/60 backdrop-blur-xl justify-between rounded-2xl p-2 flex items-end gap-2;
     }
- 
+
     .dock-tooltip {
       @apply absolute -top-10 scale-0 opacity-0 transition-all duration-100;
       @apply bg-gnome-topbar/80 backdrop-blur-md text-white text-[12px] font-medium;
@@ -138,35 +146,37 @@ body {
     @apply flex gap-2;
 
     .close {
-      @apply size-5 rounded-full bg-[#c7c6c6] cursor-default
-           text-transparent hover:text-gray-700 transition-colors;
+      @apply size-5 rounded-full bg-[#3d3d3d]  cursor-default
+         text-gray-400  hover:scale-105 hover:bg-[#4d4d4d] transition-colors;
     }
-
   }
 
   #window-header {
-     @apply flex items-center justify-between px-4 py-2
-         bg-[#2d2d2d] border-b border-[#444];
-
+    @apply flex items-center justify-between px-3 py-1.5
+         bg-[#2d2d2d] border-b border-[#2d2d2d];
 
     h2 {
       @apply order-1 text-gray-200 font-medium;
     }
+
+    .icon {
+      @apply text-gray-400 hover:text-gray-700 transition-colors cursor-pointer;
+    }
   }
 
   #firefox {
-    @apply w-4xl absolute top-40 left-2/12 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
+    @apply w-4xl absolute top-40 left-2/12 bg-gnome-surface shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
 
     .search {
-      @apply flex items-center gap-3 w-2/3 bg-white border border-gray-300 rounded-lg px-3 py-2;
+      @apply flex items-center gap-2 w-xl bg-[#3a3a3a] border-0 rounded-lg px-3 py-1;
 
       input {
-        @apply placeholder:text-gray-400;
+        @apply placeholder:text-gray-400 text-gray-200 bg-transparent w-full;
       }
     }
 
     .blog {
-      @apply bg-white p-10 max-w-3xl mx-auto;
+      @apply bg-gnome-surface p-10 max-w-3xl mx-auto;
 
       h2 {
         @apply text-xl font-bold text-pink-600 mb-10;
@@ -183,11 +193,11 @@ body {
           @apply col-span-10 space-y-3;
 
           p {
-            @apply text-xs text-gray-500;
+            @apply text-xs text-gray-200;
           }
 
           h3 {
-            @apply font-semibold text-base text-gray-800;
+            @apply font-semibold text-base text-gray-500;
           }
 
           a {
@@ -199,7 +209,7 @@ body {
   }
 
   #terminal {
-    @apply w-xl absolute top-32 left-1/12 bg-[#1e1e1e] shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
+    @apply w-xl absolute top-32 left-1/12 bg-gnome-surface shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
 
     h2 {
       @apply font-bold text-sm text-center w-full text-gray-200;
@@ -245,7 +255,7 @@ body {
   }
 
   #contact {
-    @apply max-w-2xl absolute top-60 left-5/12 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
+    @apply max-w-2xl absolute top-60 left-5/12 bg-gnome-surface shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
 
     h2 {
       @apply font-bold text-sm text-center w-full;
@@ -273,7 +283,7 @@ body {
   }
 
   #photos {
-    @apply max-w-3xl absolute top-96 left-1/2 -translate-y-1/2 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
+    @apply max-w-3xl absolute top-96 left-1/2 -translate-y-1/2 bg-gnome-surface shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
 
     .sidebar {
       @apply w-3/12 flex-none bg-gray-50 border-r border-gray-200 flex flex-col p-5;
@@ -333,7 +343,7 @@ body {
   }
 
   #resume {
-    @apply w-fit h-fit absolute top-16 left-7/12 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
+    @apply w-fit h-fit absolute top-16 left-7/12 bg-gnome-surface shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
 
     #window-header {
       h2 {
@@ -370,7 +380,7 @@ body {
     }
 
     .content {
-      @apply flex-1 p-8 bg-white max-w-2xl relative;
+      @apply flex-1 p-8 bg-gnome-surface max-w-2xl relative;
 
       li {
         @apply absolute flex items-center flex-col gap-3;
@@ -387,7 +397,7 @@ body {
   }
 
   #txtfile {
-    @apply w-md absolute top-36 right-32 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
+    @apply w-md absolute top-36 right-32 bg-gnome-surface shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
 
     h2 {
       @apply font-bold text-sm text-center w-full;
@@ -395,7 +405,7 @@ body {
   }
 
   #imgfile {
-    @apply w-xl absolute top-40 left-2/12 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
+    @apply w-xl absolute top-40 left-2/12 bg-gnome-surface shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
 
     #window-header {
       p {

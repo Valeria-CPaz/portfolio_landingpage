@@ -1,18 +1,24 @@
 import dayjs from "dayjs";
 
 import { navIcons, navLinks } from "#constants";
-
+import useWindowStore from "#store/window";
 
 const NavBar = () => {
+  const { openWindow } = useWindowStore();
+
   return (
     <nav>
       <div>
-        <img src="/images/fedora-dash.svg" alt="dash" className="h-10px w-auto"/>
+        <img
+          src="/images/fedora-dash.svg"
+          alt="dash"
+          className="h-10px w-auto"
+        />
         <p className="font-bold">Activities</p>
 
         <ul>
-          {navLinks.map(({ id, name }) => (
-            <li key={id}>
+          {navLinks.map(({ id, name, type }) => (
+            <li key={id} onClick={() => openWindow(type)}>
               <p>{name}</p>
             </li>
           ))}
@@ -20,7 +26,7 @@ const NavBar = () => {
       </div>
 
       <div>
-         <time>{dayjs().format("MMM D H:mm")}</time>
+        <time>{dayjs().format("MMM D H:mm")}</time>
       </div>
 
       <div>
@@ -31,10 +37,10 @@ const NavBar = () => {
             </li>
           ))}
         </ul>
-        <p className="font-bold ml-2">Valeria Paz</p>       
+        <p className="font-bold ml-2">Valeria Paz</p>
       </div>
     </nav>
-  )
+  );
 };
 
 export default NavBar;
