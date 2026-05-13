@@ -121,17 +121,24 @@ const techStack = [
 const socials = [
   {
     id: 1,
-    text: "Github",
-    icon: "/icons/github.svg",
-    bg: "#f4656b",
-    link: "https://github.com/Valeria-CPaz",
-  },
-  {
-    id: 2,
     text: "LinkedIn",
     icon: "/icons/linkedin.svg",
     bg: "#05b6f6",
-    link: "https://www.linkedin.com/in/valeria-paz-40304b45/",
+    link: "http://www.linkedin.com/in/valeria-paz-40304b45",
+  },
+  {
+    id: 2,
+    text: "Gmail",
+    icon: "/icons/gmail.png",
+    bg: "#f4656b",
+    link: "mailto:val.paz@gmail.com",
+  },
+  {
+    id: 3,
+    text: "Github",
+    icon: "/icons/github.svg",
+    bg: "#10B2A3",
+    link: "https://github.com/Valeria-CPaz",
   },
 ];
 
@@ -197,14 +204,14 @@ const WORK_LOCATION = {
   id: 1,
   type: "work",
   name: "Work",
-  icon: "/icons/work.svg",
+  icon: "/icons/home.svg",
   kind: "folder",
   children: [
     // ▶ Project 1
     {
       id: 5,
       name: "Nike Ecommerce Website Application",
-      icon: "/images/folder.png",
+      icon: "/images/folder.svg",
       kind: "folder",
       position: "top-10 left-5", // icon position inside Finder
       windowPosition: "top-[5vh] left-5", // optional: Finder window position
@@ -257,7 +264,7 @@ const WORK_LOCATION = {
     {
       id: 6,
       name: "AI Resume Analyzer",
-      icon: "/images/folder.png",
+      icon: "/images/folder.svg",
       kind: "folder",
       position: "top-52 right-80",
       windowPosition: "top-[20vh] left-7",
@@ -310,7 +317,7 @@ const WORK_LOCATION = {
     {
       id: 7,
       name: "Food Delivery App",
-      icon: "/images/folder.png",
+      icon: "/images/folder.svg",
       kind: "folder",
       position: "top-10 left-80",
       windowPosition: "top-[33vh] left-7",
@@ -365,7 +372,7 @@ const ABOUT_LOCATION = {
   id: 2,
   type: "about",
   name: "About me",
-  icon: "/icons/info.svg",
+  icon: "/icons/network.svg",
   kind: "folder",
   children: [
     {
@@ -424,11 +431,9 @@ const RESUME_LOCATION = {
     {
       id: 1,
       name: "Resume.pdf",
-      icon: "/images/pdf.png",
+      icon: "/images/pdf.svg",
       kind: "file",
       fileType: "pdf",
-      // you can add `href` if you want to open a hosted resume
-      // href: "/your/resume/path.pdf",
     },
   ],
 };
